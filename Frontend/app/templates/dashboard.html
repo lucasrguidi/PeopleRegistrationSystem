@@ -1,0 +1,96 @@
+<div class="flex p-6 gap-8 w-full">
+  <div
+    class="w-full w-1/4 max-w-md h-fit flex flex-col justify-center bg-gray-100 p-8 rounded-md shadow-md border"
+  >
+    <h2 class="text-2xl font-semibold text-gray-900 mb-6">
+      Cadastro de Pessoa
+    </h2>
+
+    <form ng-submit="addPerson()">
+      <div class="mb-4">
+        <label for="name" class="block text-sm font-medium text-gray-700"
+          >Nome</label
+        >
+        <input
+          id="name"
+          type="text"
+          ng-model="newPerson.name"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label for="cpf" class="block text-sm font-medium text-gray-700"
+          >CPF</label
+        >
+        <input
+          id="cpf"
+          type="text"
+          ng-model="newPerson.cpf"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label for="address" class="block text-sm font-medium text-gray-700"
+          >Endereço</label
+        >
+        <input
+          id="address"
+          type="text"
+          ng-model="newPerson.address"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          required
+        />
+      </div>
+      <div class="mb-6">
+        <label for="phone" class="block text-sm font-medium text-gray-700"
+          >Telefone</label
+        >
+        <input
+          id="phone"
+          type="text"
+          ng-model="newPerson.phone"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-yellow-500 text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 hover:bg-yellow-600"
+      >
+        Cadastrar
+      </button>
+    </form>
+  </div>
+
+  <div class="h-full w-3/4 bg-gray-100 p-8 rounded-md shadow-md border">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-6">
+      Tabela de Cadastro de Pessoas
+    </h2>
+
+    <table class="min-w-full table-auto border-collapse">
+      <thead>
+        <tr class="bg-yellow-500 text-white">
+          <th class="py-3 px-6 text-left text-sm font-medium">Código</th>
+          <th class="py-3 px-6 text-left text-sm font-medium">Nome</th>
+          <th class="py-3 px-6 text-left text-sm font-medium">CPF</th>
+          <th class="py-3 px-6 text-left text-sm font-medium">Endereço</th>
+          <th class="py-3 px-6 text-left text-sm font-medium">Telefone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="bg-white border-b hover:bg-gray-50"
+          ng-repeat="pessoa in person"
+        >
+          <td class="py-3 px-6 text-sm text-gray-900">{{pessoa.code}}</td>
+          <td class="py-3 px-6 text-sm text-gray-900">{{pessoa.name}}</td>
+          <td class="py-3 px-6 text-sm text-gray-900">{{pessoa.cpf}}</td>
+          <td class="py-3 px-6 text-sm text-gray-900">{{pessoa.address}}</td>
+          <td class="py-3 px-6 text-sm text-gray-900">{{pessoa.phone}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
