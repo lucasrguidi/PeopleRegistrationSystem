@@ -1,6 +1,8 @@
 angular
   .module('PeopleRegistrationApp')
-  .controller('DashboardController', function ($scope, $http) {
+  .controller('DashboardController', function ($scope, $http, toastService) {
+    $scope.toastService = toastService;
+
     $scope.loadPeople = function () {
       $http
         .get('http://localhost:5062/api/person/list')
@@ -8,13 +10,13 @@ angular
           $scope.person = response.data;
         })
         .catch(function (error) {
-          alert(error.data);
+          toastService.show(error.data, 'error');
         });
     };
 
     $scope.addPerson = function () {
       if (!$scope.newPerson.name || !$scope.newPerson.cpf) {
-        alert('Os campos Nome e CPF são obrigatórios.');
+        toastService.show('Os campos Nome e CPF são obrigatórios.', 'error');
         return;
       }
 
@@ -22,11 +24,11 @@ angular
         .post('http://localhost:5062/api/person/add', $scope.newPerson)
         .then(function (response) {
           $scope.newPerson = {};
-          alert(response.data);
+          toastService.show(response.data);
           $scope.loadPeople();
         })
         .catch(function (error) {
-          alert(error.data);
+          toastService.show(error.data, 'error');
         });
     };
 

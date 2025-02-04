@@ -1,6 +1,12 @@
 <!DOCTYPE html>
-<html ng-app="PeopleRegistrationApp" class="h-full bg-white">
+<html
+  ng-app="PeopleRegistrationApp"
+  class="h-full bg-white"
+  ng-controller="MainController"
+>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro de Pessoas</title>
 
     <!-- Tailwind CSS -->
@@ -16,11 +22,41 @@
     <!-- App Scripts -->
     <script src="app.module.js"></script>
     <script src="app.routes.js"></script>
+
+    <!-- Services -->
     <script src="app/services/auth.service.js"></script>
+    <script src="app/services/toast.service.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/controllers/main.controller.js"></script>
     <script src="app/controllers/login.controller.js"></script>
     <script src="app/controllers/dashboard.controller.js"></script>
   </head>
+
   <body class="h-full">
-    <ng-view></ng-view>
+    <!-- Toast Container Global -->
+    <div class="fixed top-4 right-4 space-y-2 z-50">
+      <div
+        ng-repeat="toast in toastService.messages track by toast.id"
+        class="p-4 rounded-lg shadow-lg text-white transition-opacity duration-300 animate__animated animate__fadeInRight"
+        ng-class="{
+          'bg-green-500': toast.type === 'success',
+          'bg-red-500': toast.type === 'error',
+          'animate__fadeOutRight': !toast.visible
+        }"
+      >
+        {{ toast.message }}
+        <button
+          class="ml-4 hover:text-black transition-colors"
+          ng-click="toastService.removeToast(toast.id)"
+          aria-label="Fechar notificação"
+        >
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <ng-view class="block h-full"></ng-view>
   </body>
 </html>
