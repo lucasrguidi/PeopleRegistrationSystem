@@ -21,8 +21,9 @@ angular
       $http
         .post('http://localhost:5062/api/person/add', $scope.newPerson)
         .then(function (response) {
+          console.log('🚀 ~ response:', response);
           $scope.newPerson = {};
-          alert('Pessoa cadastrada com sucesso!');
+          alert(response.data);
           $scope.loadPeople();
         })
         .catch(function (error) {
