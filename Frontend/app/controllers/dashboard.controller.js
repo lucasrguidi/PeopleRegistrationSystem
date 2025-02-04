@@ -32,5 +32,19 @@ angular
         });
     };
 
+    $scope.removePerson = function (id) {
+      if (confirm('Tem certeza que deseja remover esta pessoa?')) {
+        $http
+          .delete('http://localhost:5062/api/person/remove/' + id)
+          .then(function (response) {
+            toastService.show(response.data);
+            $scope.loadPeople(); 
+          })
+          .catch(function (error) {
+            toastService.show(error.data, 'error');
+          });
+      }
+    };
+
     $scope.loadPeople();
   });

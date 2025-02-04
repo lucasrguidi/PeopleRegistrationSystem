@@ -39,7 +39,7 @@ namespace Backend.Controllers
             }
 
             people.Remove(personToRemove);
-            return Ok($"Pessoa com ID {id} removida com sucesso.");
+            return Ok($"Pessoa com código {personToRemove.Code} removida com sucesso.");
         }
 
         
@@ -48,7 +48,7 @@ namespace Backend.Controllers
         {
             if (!people.Any())
             {
-                return NotFound("Nenhuma pessoa cadastrada.");
+                return Ok(new List<Person>());
             }
 
             return Ok(people);

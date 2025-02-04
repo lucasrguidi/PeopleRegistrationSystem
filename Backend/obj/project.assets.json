@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/lucasguidi/.nuget/packages/": {}
+    "/Users/lucasguidi/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/lucasguidi/Documentos/Developer/projetos/personal/PeopleRegistrationSystem/Backend/Backend.csproj",
+      "projectUniqueName": "/Users/lucasguidi/Documents/Developer/PeopleRegistrationSystem/Backend/Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "/home/lucasguidi/Documentos/Developer/projetos/personal/PeopleRegistrationSystem/Backend/Backend.csproj",
-      "packagesPath": "/home/lucasguidi/.nuget/packages/",
-      "outputPath": "/home/lucasguidi/Documentos/Developer/projetos/personal/PeopleRegistrationSystem/Backend/obj/",
+      "projectPath": "/Users/lucasguidi/Documents/Developer/PeopleRegistrationSystem/Backend/Backend.csproj",
+      "packagesPath": "/Users/lucasguidi/.nuget/packages/",
+      "outputPath": "/Users/lucasguidi/Documents/Developer/PeopleRegistrationSystem/Backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/lucasguidi/.nuget/NuGet/NuGet.Config"
+        "/Users/lucasguidi/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -38,11 +38,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -67,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/255/sdk/8.0.405/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.12/libexec/sdk/8.0.112/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

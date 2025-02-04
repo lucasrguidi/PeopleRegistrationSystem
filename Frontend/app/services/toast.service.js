@@ -15,7 +15,7 @@ angular
 
         $timeout(() => {
           this.removeToast(toast.id);
-        }, 1500);
+        }, 2500);
       },
       removeToast: function (id) {
         this.messages = this.messages.filter((t) => t.id !== id);

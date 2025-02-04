@@ -9,39 +9,39 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Backend
 build_property.RootNamespace = Backend
-build_property.ProjectDir = /home/lucasguidi/Documentos/Developer/projetos/personal/PeopleRegistrationSystem/Backend/
+build_property.ProjectDir = /Users/lucasguidi/Documents/Developer/PeopleRegistrationSystem/Backend/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/lucasguidi/Documentos/Developer/projetos/personal/PeopleRegistrationSystem/Backend
+build_property.MSBuildProjectDirectory = /Users/lucasguidi/Documents/Developer/PeopleRegistrationSystem/Backend
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/lucasguidi/Documentos/Developer/projetos/personal/PeopleRegistrationSystem/Backend/Views/Home/Index.cshtml]
+[/Users/lucasguidi/Documents/Developer/PeopleRegistrationSystem/Backend/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/lucasguidi/Documentos/Developer/projetos/personal/PeopleRegistrationSystem/Backend/Views/Home/Privacy.cshtml]
+[/Users/lucasguidi/Documents/Developer/PeopleRegistrationSystem/Backend/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/lucasguidi/Documentos/Developer/projetos/personal/PeopleRegistrationSystem/Backend/Views/Shared/Error.cshtml]
+[/Users/lucasguidi/Documents/Developer/PeopleRegistrationSystem/Backend/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/lucasguidi/Documentos/Developer/projetos/personal/PeopleRegistrationSystem/Backend/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/lucasguidi/Documents/Developer/PeopleRegistrationSystem/Backend/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/lucasguidi/Documentos/Developer/projetos/personal/PeopleRegistrationSystem/Backend/Views/_ViewImports.cshtml]
+[/Users/lucasguidi/Documents/Developer/PeopleRegistrationSystem/Backend/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/lucasguidi/Documentos/Developer/projetos/personal/PeopleRegistrationSystem/Backend/Views/_ViewStart.cshtml]
+[/Users/lucasguidi/Documents/Developer/PeopleRegistrationSystem/Backend/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/lucasguidi/Documentos/Developer/projetos/personal/PeopleRegistrationSystem/Backend/Views/Shared/_Layout.cshtml]
+[/Users/lucasguidi/Documents/Developer/PeopleRegistrationSystem/Backend/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6k3lzvzvuc
