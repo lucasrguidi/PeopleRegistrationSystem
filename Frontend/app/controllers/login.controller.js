@@ -7,11 +7,11 @@ angular
       $http
         .post('http://localhost:5062/api/auth/login', $scope.login)
         .then(function (response) {
-          alert('Login bem-sucedido');
+          alert(response.data);
           $location.path('/dashboard');
         })
         .catch(function (error) {
-          alert('Credenciais inválidas');
+          alert(error.data);
         });
     };
   });

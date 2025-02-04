@@ -12,9 +12,9 @@ namespace Backend.Controllers
         {
             if (auth.Username == "SISTEMA" && auth.Password == "candidato123")
             {
-                return Ok("Authorized");
+                return Ok("Autorizado");
             }
-            return Unauthorized("Unauthorized"); 
+            return Unauthorized("Não autorizado"); 
         }
     }
 }

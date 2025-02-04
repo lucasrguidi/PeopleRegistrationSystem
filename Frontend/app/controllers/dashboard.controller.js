@@ -8,7 +8,7 @@ angular
           $scope.person = response.data;
         })
         .catch(function (error) {
-          alert('Erro ao carregar lista de pessoas');
+          alert(error.data);
         });
     };
 
@@ -21,14 +21,12 @@ angular
       $http
         .post('http://localhost:5062/api/person/add', $scope.newPerson)
         .then(function (response) {
-          console.log('🚀 ~ response:', response);
           $scope.newPerson = {};
           alert(response.data);
           $scope.loadPeople();
         })
         .catch(function (error) {
-          console.log(error);
-          alert('Erro ao cadastrar a pessoa');
+          alert(error.data);
         });
     };
 
