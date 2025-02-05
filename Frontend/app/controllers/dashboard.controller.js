@@ -1,11 +1,13 @@
 angular
   .module('PeopleRegistrationApp')
-  .controller('DashboardController', function ($scope, $http, toastService) {
+  .controller('DashboardController', function ($scope, $http, toastService, config) {
     $scope.toastService = toastService;
 
+    const baseUrl = config.apiUrl;
+    
     $scope.loadPeople = function () {
       $http
-        .get('http://localhost:5062/api/person/list')
+        .get(baseUrl + '/person/list')
         .then(function (response) {
           $scope.person = response.data;
         })
@@ -21,7 +23,7 @@ angular
       }
 
       $http
-        .post('http://localhost:5062/api/person/add', $scope.newPerson)
+        .post(baseUrl+ '/person/add', $scope.newPerson)
         .then(function (response) {
           $scope.newPerson = {};
           toastService.show(response.data);
@@ -35,7 +37,7 @@ angular
     $scope.removePerson = function (id) {
       if (confirm('Tem certeza que deseja remover esta pessoa?')) {
         $http
-          .delete('http://localhost:5062/api/person/remove/' + id)
+          .delete(baseUrl +'/person/remove/' + id)
           .then(function (response) {
             toastService.show(response.data);
             $scope.loadPeople(); 

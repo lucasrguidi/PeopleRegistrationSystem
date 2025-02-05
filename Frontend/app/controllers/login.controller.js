@@ -2,12 +2,14 @@ angular
   .module('PeopleRegistrationApp')
   .controller(
     'LoginController',
-    function ($scope, $http, $location, toastService) {
+    function ($scope, $http, $location, toastService, config) {
+      const baseUrl = config.apiUrl;
+
       $scope.login = {};
 
       $scope.loginUser = function () {
         $http
-          .post('http://localhost:5062/api/auth/login', $scope.login)
+          .post(baseUrl + '/auth/login', $scope.login)
           .then(function (response) {
             toastService.show(response.data);
             $location.path('/dashboard');

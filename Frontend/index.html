@@ -1,62 +1,57 @@
 <!DOCTYPE html>
-<html
-  ng-app="PeopleRegistrationApp"
-  class="h-full bg-white"
-  ng-controller="MainController"
->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro de Pessoas</title>
+<html ng-app="PeopleRegistrationApp" class="h-full bg-white" ng-controller="MainController">
 
-    <!-- Tailwind CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Pessoas</title>
 
-    <!-- AngularJS -->
-    <script src="https://code.angularjs.org/1.7.8/angular.min.js"></script>
-    <script src="https://code.angularjs.org/1.7.8/angular-route.min.js"></script>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 
-    <!-- App Scripts -->
-    <script src="app.module.js"></script>
-    <script src="app.routes.js"></script>
+  <!-- Configurações -->
+  <script src="config.js"></script>
 
-    <!-- Services -->
-    <script src="app/services/auth.service.js"></script>
-    <script src="app/services/toast.service.js"></script>
+  <!-- AngularJS -->
+  <script src="https://code.angularjs.org/1.7.8/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.7.8/angular-route.min.js"></script>
 
-    <!-- Controllers -->
-    <script src="app/controllers/main.controller.js"></script>
-    <script src="app/controllers/login.controller.js"></script>
-    <script src="app/controllers/dashboard.controller.js"></script>
-  </head>
+  <!-- App Scripts -->
+  <script src="app.module.js"></script>
+  <script src="app.routes.js"></script>
 
-  <body class="h-full">
-    <!-- Toast Container Global -->
-    <div class="fixed top-4 right-4 space-y-2 z-50">
-      <div
-        ng-repeat="toast in toastService.messages track by toast.id"
-        class="p-4 rounded-lg shadow-lg text-white transition-opacity duration-300 animate__animated animate__fadeInRight"
-        ng-class="{
+  <!-- Services -->
+  <script src="app/services/toast.service.js"></script>
+
+  <!-- Controllers -->
+  <script src="app/controllers/main.controller.js"></script>
+  <script src="app/controllers/login.controller.js"></script>
+  <script src="app/controllers/dashboard.controller.js"></script>
+
+
+
+</head>
+
+<body class="h-full">
+  <!-- Toast Container Global -->
+  <div class="fixed top-4 right-4 space-y-2 z-50">
+    <div ng-repeat="toast in toastService.messages track by toast.id"
+      class="p-4 rounded-lg shadow-lg text-white transition-opacity duration-300 animate__animated animate__fadeInRight"
+      ng-class="{
           'bg-green-500': toast.type === 'success',
           'bg-red-500': toast.type === 'error',
           'animate__fadeOutRight': !toast.visible
-        }"
-      >
-        {{ toast.message }}
-        <button
-          class="ml-4 hover:text-black transition-colors"
-          ng-click="toastService.removeToast(toast.id)"
-          aria-label="Fechar notificação"
-        >
-          &times;
-        </button>
-      </div>
+        }">
+      {{ toast.message }}
+      <button class="ml-4 hover:text-black transition-colors" ng-click="toastService.removeToast(toast.id)"
+        aria-label="Fechar notificação">
+        &times;
+      </button>
     </div>
+  </div>
 
-    <!-- Main Content -->
-    <ng-view class="block h-full"></ng-view>
-  </body>
+  <!-- Main Content -->
+  <ng-view class="block h-full"></ng-view>
+</body>
+
 </html>

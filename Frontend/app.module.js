@@ -1,1 +1,2 @@
-angular.module('PeopleRegistrationApp', ['ngRoute']);
+angular.module('PeopleRegistrationApp', ['ngRoute'])
+.constant( 'config', config );
